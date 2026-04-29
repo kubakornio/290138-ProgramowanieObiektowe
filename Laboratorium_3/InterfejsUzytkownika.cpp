@@ -9,7 +9,7 @@ InterfejsUzytkownika::InterfejsUzytkownika(Osoba* tO, int mO, ListaObecnosci* tL
 void InterfejsUzytkownika::petla() {
     int wybor;
     while (true) {
-        cout << "\n=== MENU GLOWNE (LAB 3) ===" << endl;
+        cout << "\n=== MENU GLOWNE ===" << endl;
         cout << "0. Dodaj osobe do bazy danych" << endl;
         cout << "1. Przypisz osobe z bazy do listy" << endl;
         cout << "2. Wyswietl wybrana liste" << endl;
@@ -27,7 +27,7 @@ void InterfejsUzytkownika::petla() {
             case 3: menuUstawObecnosc(); break;
             case 4: menuUsunZListy(); break;
             case 5: menuZmienDaneOsoby(); break;
-            default: cout << "Bledna opcja!" << endl;
+            default: cout << "Bledna opcja" << endl;
         }
     }
 }
@@ -42,7 +42,7 @@ void InterfejsUzytkownika::menuDodajOsobe() {
         bazaOsob[aktOsob] = Osoba(nr, im, naz);
         aktOsob++;
         cout << "Dodano do bazy (pozycja: " << aktOsob - 1 << ")" << endl;
-    } else cout << "Baza osob pelna!" << endl;
+    } else cout << "Baza osob pelna" << endl;
 }
 
 void InterfejsUzytkownika::menuPrzypiszDoListy() {
@@ -50,7 +50,7 @@ void InterfejsUzytkownika::menuPrzypiszDoListy() {
     cout << "Nr osoby w bazie (0-" << aktOsob-1 << "): "; cin >> oIdx;
     cout << "Nr listy (0-" << maxList-1 << "): "; cin >> lIdx;
     if (oIdx >= 0 && oIdx < aktOsob && lIdx >= 0 && lIdx < maxList) {
-        bazyList[lIdx].dodajOsobeDoListy(&bazaOsob[oIdx]); // Przekazujemy ADRES
+        bazyList[lIdx].dodajOsobeDoListy(&bazaOsob[oIdx]); // przekazujemy ADRES
     }
 }
 
@@ -83,6 +83,6 @@ void InterfejsUzytkownika::menuZmienDaneOsoby() {
         cout << "Nowe nazwisko: "; cin >> naz;
         bazaOsob[oIdx].setImie(im);
         bazaOsob[oIdx].setNazwisko(naz);
-        cout << "Dane zaktualizowane w bazie i na wszystkich listach!" << endl;
+        cout << "Dane zaktualizowane w bazie i na wszystkich listach" << endl;
     }
 }
