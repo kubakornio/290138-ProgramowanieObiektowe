@@ -10,7 +10,7 @@ private:
     int maxOsob, maxList;
     int aktOsob;
 
-    // Metody prywatne - te z prawej strony tablicy
+    // metody prywatne
     void menuDodajOsobe();       // 0
     void menuPrzypiszDoListy();  // 1
     void menuUstawObecnosc();    // 3
