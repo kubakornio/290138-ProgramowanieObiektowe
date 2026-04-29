@@ -4,8 +4,8 @@
 
 class ListaObecnosci {
 private:
-    Osoba* tabOsob[10];      // Tablica wskaznikow do bazy
-    bool tabObecnosci[10];   // Obecnosc na tej konkretnej liscie
+    Osoba* tabOsob[10];      // tablica wskaznikow do bazy
+    bool tabObecnosci[10];   // obecnosc na tej konkretnej liscie
     int licznik;
 
 public:
