@@ -23,7 +23,7 @@ void ListaObecnosci::usunZListy(int index) {
             tabObecnosci[j] = tabObecnosci[j+1];
         }
         licznik--;
-        cout << "Usunieto z listy (bez dziur)." << endl;
+        cout << "Usunieto z listy." << endl;
     }
 }
 
@@ -39,7 +39,7 @@ void ListaObecnosci::drukuj() {
     if (licznik == 0) cout << "Pusta." << endl;
     for (int i = 0; i < licznik; i++) {
         cout << i << ". ";
-        tabOsob[i]->wyswietl(); // Uzywamy -> bo to wskaznik
+        tabOsob[i]->wyswietl(); // -> bo to wskaznik
         cout << " [" << (tabObecnosci[i] ? "1" : "0") << "]" << endl;
     }
 }
