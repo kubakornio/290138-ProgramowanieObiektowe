@@ -1,7 +1,7 @@
 #include "InterfejsUzytkownika.h"
 
 int main() {
-    // Te dwie tablice zostaly teraz "obudowane" w Interfejs i Listy
+    // te dwie tablice zostaly teraz "obudowane" w interfejs i listy
     Osoba bazaOsob[10];
     ListaObecnosci tablicaList[2];
 
