@@ -13,7 +13,7 @@ InterfejsUzytkownika::InterfejsUzytkownika(Osoba* tabO, int mOsob, ListaObecnosc
 }
 
 void InterfejsUzytkownika::dodajOsobe() {
-    if (iloscOsob >= maxOsob) { cout << "brak miejsca w bazie!\n"; return; }
+    if (iloscOsob >= maxOsob) { cout << "brak miejsca w bazie\n"; return; }
     
     string imie, nazwisko, data; int ind, wzr;
     cout << "imie: "; cin >> imie;
@@ -93,7 +93,7 @@ void InterfejsUzytkownika::zmienDaneOsoby() {
 void InterfejsUzytkownika::petla() {
     char wybor;
     do {
-        cout << "\n--- menu obiektowe ---\n";
+        cout << "\n--- menu ---\n";
         cout << "0. dodaj osobe do glownej bazy\n";
         cout << "1. przypisz osobe do listy\n";
         cout << "2. drukuj liste\n";
