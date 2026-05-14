@@ -78,7 +78,7 @@ int main() {
     int wybor;
 
     do {
-        cout << "\n--- menu laby 2 ---\n";
+        cout << "\n--- menu ---\n";
         cout << "1. dodaj osobe\n2. ustaw obecnosc\n3. drukuj liste\n4. usun osobe\n5. edytuj osobe\n0. koniec\n";
         cout << "wybor: ";
         cin >> wybor;
