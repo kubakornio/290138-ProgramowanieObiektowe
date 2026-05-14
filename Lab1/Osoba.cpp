@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// tak tworzymy domyslna osobe
+// domyslna osoba
 Osoba::Osoba() {
     imie = "";
     nazwisko = "";
@@ -11,7 +11,7 @@ Osoba::Osoba() {
     obecnosc = false;
 }
 
-// tak tworzymy osobe z konkretnymi danymi zdefiniowanymi podczas tworzenia
+// osoba z konkretnymi danymi zdefiniowanymi podczas tworzenia
 Osoba::Osoba(string i, string n, int ind) {
     imie = i;
     nazwisko = n;
@@ -19,7 +19,7 @@ Osoba::Osoba(string i, string n, int ind) {
     obecnosc = false; // na start brak obecnosci
 }
 
-// pobiera prywatne nazwisko - sluzy do wyszukiwania (nasz klucz)
+// pobiera prywatne nazwisko sluzy do wyszukiwania
 string Osoba::getNazwisko() {
     return nazwisko;
 }
