@@ -4,17 +4,17 @@
 
 using namespace std;
 
-// funkcja dodaje nowy obiekt klasy Osoba do tablicy obiektow
+// dodanie nowego obiektu klasy osoba do tablicy obiektow
 bool dodajOsobeMenu(Osoba tablica[], int &ileOsob, string imie, string nazwisko, int indeks) {
     if (ileOsob >= 10) return false; // brak miejsca
 
-    // tworzymy nowy obiekt i wrzucamy do tablicy
+    // nowy obiekt i wrzucenie go do tablicy
     tablica[ileOsob] = Osoba(imie, nazwisko, indeks);
     ileOsob++;
     return true;
 }
 
-// funkcja szuka osoby po nazwisku (klucz) i ustawia obecnosc na konkretnym obiekcie
+// funkcja szuka osoby po nazwisku i ustawia obecnosc na konkretnym obiekcie
 bool ustawObecnoscMenu(Osoba tablica[], int ileOsob, string nazwisko, bool ob) {
     for (int i = 0; i < ileOsob; i++) {
         if (tablica[i].getNazwisko() == nazwisko) {
@@ -37,7 +37,7 @@ void drukujListeMenu(Osoba tablica[], int ileOsob) {
 bool usunOsobeMenu(Osoba tablica[], int &ileOsob, string nazwisko) {
     for (int i = 0; i < ileOsob; i++) {
         if (tablica[i].getNazwisko() == nazwisko) {
-            // przesuwamy z prawej do lewej
+            // przeuswanie z prawej do lewej
             for (int j = i; j < ileOsob - 1; j++) {
                 tablica[j] = tablica[j + 1];
             }
@@ -60,7 +60,6 @@ bool edytujOsobeMenu(Osoba tablica[], int ileOsob, string stareNazwisko, string 
 }
 
 int main() {
-    // to jest to, co najwazniejsze - JEDNA tablica 10 obiektow zamiast 4 tablic danych!
     Osoba listaStudentow[10];
     int ileOsob = 0;
     int wybor;
