@@ -14,12 +14,12 @@ private:
     bool obecnosc;
 
 public:
-    // domyslny konstruktor (tworzy pustego studenta)
+    // domyslny konstruktor
     Osoba();
-    // konstruktor z parametrami (do szybkiego tworzenia gotowej osoby)
+    // konstruktor z parametrami
     Osoba(string i, string n, int ind);
 
-    // metoda do pobrania nazwiska (bo nazwisko jest prywatne, a potrzebujemy klucza)
+    // metoda do pobrania nazwiska
     string getNazwisko();
 
     // metody do dzialania na danych
