@@ -68,7 +68,7 @@ void InterfejsUzytkownika::przypiszOsobeDoListy() {
     cout << "nazwisko osoby do przypisania: "; cin >> nazwisko;
     cout << "do ktorej listy (1 lub 2): "; cin >> nrListy;
     
-    if (nrListy < 1 || nrListy > maxList) { cout << "zly numer listy!\n"; return; }
+    if (nrListy < 1 || nrListy > maxList) { cout << "zly numer listy\n"; return; }
 
     for (int i = 0; i < iloscOsob; i++) {
         if (tabOsob[i]->getNazwisko() == nazwisko) {
@@ -88,9 +88,9 @@ void InterfejsUzytkownika::ustawObecnoscNaLiscie() {
     
     if (nrListy >= 1 && nrListy <= maxList) {
         if (tablicaList[nrListy-1].ustawObecnosc(nazwisko, ob)) {
-            cout << "ustawiono.\n";
+            cout << "ustawiono\n";
         } else {
-            cout << "brak osoby na liscie.\n";
+            cout << "brak osoby na liscie\n";
         }
     }
 }
@@ -101,7 +101,7 @@ void InterfejsUzytkownika::usunOsobe() {
     for (int i = 0; i < maxList; i++) {
         tablicaList[i].usunOsobe(nazwisko);
     }
-    cout << "procedura usuwania zakonczona.\n";
+    cout << "procedura usuwania zakonczona\n";
 }
 
 void InterfejsUzytkownika::zmienDaneOsoby() {
@@ -114,17 +114,17 @@ void InterfejsUzytkownika::zmienDaneOsoby() {
         if (tabOsob[i]->getNazwisko() == stare) {
             tabOsob[i]->setNazwisko(noweN);
             tabOsob[i]->setImie(noweI);
-            cout << "zaktualizowano w bazie (na listach tez).\n";
+            cout << "zaktualizowano w bazie (na listach tez)\n";
             return;
         }
     }
-    cout << "nie znaleziono osoby.\n";
+    cout << "nie znaleziono osoby\n";
 }
 
 void InterfejsUzytkownika::petla() {
     char wybor;
     do {
-        cout << "\n--- menu obiektowe ---\n";
+        cout << "\n--- menu ---\n";
         cout << "0. dodaj osobe (student/pracownik) do bazy\n";
         cout << "1. przypisz osobe do listy\n";
         cout << "2. drukuj liste\n";
@@ -141,7 +141,7 @@ void InterfejsUzytkownika::petla() {
             case '2': {
                 int nr; cout << "lista (1-2): "; cin >> nr;
                 if (nr >= 1 && nr <= maxList) {
-                    // WYKORZYSTANIE INTERFEJSU: przekazujemy adres ListyObecnosci do globalnej funkcji
+                    // WYKORZYSTANIE INTERFEJSU
                     drukuj(&tablicaList[nr-1]);
                 }
                 break;
