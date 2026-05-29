@@ -7,10 +7,10 @@ using namespace std;
 class ISerializable {
 public:
     virtual string serialize() = 0;
-    virtual ~ISerializable() {} // Wirtualny destruktor jest wymagany przy polimorfizmie
+    virtual ~ISerializable() {} // wirtualny destruktor jest wymagany przy polimorfizmie
 };
 
-// Globalna funkcja drukujaca cokolwiek, co implementuje interfejs
+// globalna funkcja drukujaca cokolwiek co implementuje interfejs
 void drukuj(ISerializable *obj);
 
 #endif
