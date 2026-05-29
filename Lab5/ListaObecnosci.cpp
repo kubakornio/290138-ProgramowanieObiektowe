@@ -42,7 +42,7 @@ bool ListaObecnosci::usunOsobe(string nazwisko) {
 string ListaObecnosci::serialize() {
     string wynik = "--- LISTA OBECNOSCI ---\n";
     for (int i = 0; i < iloscZapisanych; i++) {
-        // Zamiast ucinac do klasy Osoba, wywola sie serialize() dla Studenta/Pracownika
+        // zamiast ucinac do klasy Osoba wywola sie serialize() dla studenta/pracownika
         wynik += tabOsob[i]->serialize() + " | obecnosc: " + (tabObecnosc[i] ? "1" : "0") + "\n";
     }
     return wynik;
