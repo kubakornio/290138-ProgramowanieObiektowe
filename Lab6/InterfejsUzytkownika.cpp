@@ -118,7 +118,7 @@ void InterfejsUzytkownika::zmienDaneOsoby() {
             return;
         }
     }
-    cout << "nie znaleziono osoby.\n";
+    cout << "nie znaleziono osoby\n";
 }
 
 void InterfejsUzytkownika::zapiszDoPliku(ISerializable* obj, string nazwaPliku) {
@@ -129,7 +129,7 @@ void InterfejsUzytkownika::zapiszDoPliku(ISerializable* obj, string nazwaPliku) 
         plik.close();
         cout << "Zapisano do pliku: " << nazwaPliku << "\n";
     } else {
-        cout << "Blad otwarcia pliku!\n";
+        cout << "Blad otwarcia pliku\n";
     }
 }
 
@@ -151,7 +151,7 @@ void InterfejsUzytkownika::menuZapiszDoPliku() {
                 // przekazuje adres listy lista implementuje ISerializable
                 zapiszDoPliku(&tablicaList[nr-1], nazwa); 
             } else {
-                cout << "Zly numer listy.\n";
+                cout << "Zly numer listy\n";
             }
         } 
         else if (coZapisac == 2) {
@@ -167,17 +167,17 @@ void InterfejsUzytkownika::menuZapiszDoPliku() {
                     break;
                 }
             }
-            if (!znaleziono) cout << "Nie znaleziono takiej osoby w bazie.\n";
+            if (!znaleziono) cout << "Nie znaleziono takiej osoby w bazie\n";
         }
     } else {
-        cout << "Zly wybor.\n";
+        cout << "Zly wybor\n";
     }
 }
 
 void InterfejsUzytkownika::petla() {
     char wybor;
     do {
-        cout << "\n--- menu v6 (ZAPIS DO PLIKU) ---\n";
+        cout << "\n--- menu ---\n";
         cout << "0. dodaj osobe\n1. przypisz do listy\n2. drukuj liste\n";
         cout << "3. ustaw obecnosc\n4. usun z list\n5. edytuj dane\n";
         cout << "6. zapisz do pliku txt\n";
