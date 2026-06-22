@@ -123,7 +123,7 @@ void InterfejsUzytkownika::zmienDaneOsoby() {
 void InterfejsUzytkownika::petla() {
     char wybor;
     do {
-        cout << "\n--- menu obiektowe ---\n";
+        cout << "\n--- menu ---\n";
         cout << "0. dodaj osobe (student/pracownik) do bazy\n";
         cout << "1. przypisz osobe do listy\n";
         cout << "2. drukuj liste\n";
